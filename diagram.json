@@ -1,0 +1,40 @@
+{
+  "version": 1,
+  "author": "Krishna Kumar",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "wokwi-arduino-mega",
+      "id": "mega",
+      "top": -20.8,
+      "left": -12.2,
+      "rotate": 90,
+      "attrs": {}
+    },
+    { "type": "wokwi-lcd1602", "id": "lcd1", "top": -169.37, "left": -233.6, "attrs": {} },
+    { "type": "wokwi-hc-sr04", "id": "ultrasonic1", "top": 155.1, "left": 293.5, "attrs": {} }
+  ],
+  "connections": [
+    [ "lcd1:D0", "mega:A0", "green", [ "v0" ] ],
+    [ "lcd1:D1", "mega:A1", "green", [ "v0" ] ],
+    [ "lcd1:D2", "mega:A2", "green", [ "v0" ] ],
+    [ "lcd1:D3", "mega:A3", "green", [ "v0" ] ],
+    [ "lcd1:D4", "mega:A4", "green", [ "v0" ] ],
+    [ "lcd1:D5", "mega:A5", "green", [ "v0" ] ],
+    [ "lcd1:D6", "mega:A6", "green", [ "v0" ] ],
+    [ "lcd1:D7", "mega:A7", "green", [ "v0" ] ],
+    [ "mega:GND.2", "lcd1:K", "black", [ "h0" ] ],
+    [ "mega:GND.2", "lcd1:VSS", "black", [ "h0" ] ],
+    [ "mega:GND.2", "lcd1:RW", "black", [ "h0" ] ],
+    [ "mega:5V", "lcd1:VDD", "red", [ "h0" ] ],
+    [ "mega:5V", "lcd1:V0", "red", [ "h0" ] ],
+    [ "mega:5V", "lcd1:A", "red", [ "h0" ] ],
+    [ "mega:A8", "lcd1:E", "orange", [ "h0" ] ],
+    [ "mega:A9", "lcd1:RS", "gold", [ "h0" ] ],
+    [ "ultrasonic1:TRIG", "mega:22", "white", [ "v28.8", "h-106" ] ],
+    [ "ultrasonic1:ECHO", "mega:37", "gray", [ "v48", "h-192.8" ] ],
+    [ "mega:5V.1", "ultrasonic1:VCC", "red", [ "v0" ] ],
+    [ "mega:GND.5", "ultrasonic1:GND", "black", [ "h-0.95", "v64.6", "h297.6" ] ]
+  ],
+  "dependencies": {}
+}
